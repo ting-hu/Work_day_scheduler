@@ -25,17 +25,19 @@ var colorCode = function () {
   }
 };
 
-$(".saveBtn").click(function (event) {
+$("#saveBtn").click(function (event) {
   event.preventDefault();
   var record = $(this).siblings(".userinput").val();
   var listItem = $(this).parent().data("hour");
   localStorage.setItem(listItem, record);
 });
-var dataTime = [9, 10, 11, 12, 1, 2, 3, 4, 5];
-$(document).ready(function () {
-  for (var i = 0; i < dataTime.length; i++) {
-    var dataHour = localStorage.getItem(dataTime[i]);
+
+var loadPage = function () {
+  colorCode();
+  for (var i = 0; i < timeSlot.length; i++) {
+    var dataHour = localStorage.getItem(timeSlot[i]);
     $(inputSlot[i]).val(dataHour);
   }
-  colorCode();
-});
+};
+
+loadPage();
