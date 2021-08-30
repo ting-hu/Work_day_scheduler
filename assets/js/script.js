@@ -1,6 +1,4 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-//var currentTime = moment().;
-var timeSlot = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 var inputSlot = [
   "#userinput_1",
   "#userinput_2",
@@ -14,18 +12,19 @@ var inputSlot = [
 ];
 
 var colorCode = function () {
-  for (let i = 0; i < timeSlot.length; i++) {
-    if (moment().isAfter(timeSlot[i])) {
-      $(inputSlot[i]).addClass("past");
-    } else if (moment().isBefore(timeSlot[i])) {
-      $(inputSlot[i]).addClass("future");
-    } else if (moment().isSame(timeSlot[i])) {
-      $(inputSlot[i]).addClass("present");
+  for (let i = 9; i < 18; i++) {
+    if (parseInt(moment().format("H")) > i) {
+      $(inputSlot[i - 9]).addClass("past");
+    } else if (parseInt(moment().format("H")) < i) {
+      $(inputSlot[i - 9]).addClass("future");
+    } else {
+      $(inputSlot[i - 9]).addClass("present");
     }
   }
 };
 
-$("#saveBtn").click(function (event) {
+// Using Class instead of ID cause ID only can be used once.
+$(".saveBtn").click(function (event) {
   event.preventDefault();
   var record = $(this).siblings(".userinput").val();
   var listItem = $(this).parent().data("hour");
@@ -34,9 +33,9 @@ $("#saveBtn").click(function (event) {
 
 var loadPage = function () {
   colorCode();
-  for (var i = 0; i < timeSlot.length; i++) {
-    var dataHour = localStorage.getItem(timeSlot[i]);
-    $(inputSlot[i]).val(dataHour);
+  for (var i = 9; i < 18; i++) {
+    var dataHour = localStorage.getItem(i);
+    $(inputSlot[i - 9]).val(dataHour);
   }
 };
 
