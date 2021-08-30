@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,9 +32,85 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">9AM</div>
+        <textarea id="userinput_1" class="col-9 userinput_1"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="i">&#128190;</span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">10AM</div>
+        <textarea id="userinput_2" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">11AM</div>
+        <textarea id="userinput_3" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">12AM</div>
+        <textarea id="userinput_4" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">1PM</div>
+        <textarea id="userinput_5" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">2PM</div>
+        <textarea id="userinput_6" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">3PM</div>
+        <textarea id="userinput_7" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">4PM</div>
+        <textarea id="userinput_8" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="time-block" class="col-2 time-block">5PM</div>
+        <textarea id="userinput_9" class="col-9 userinput_2"></textarea>
+        <button id="saveBtn" class="col-1 saveBtn">
+          <span class="oi oi-lock-unclocked"></span>
+        </button>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
